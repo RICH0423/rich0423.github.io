@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="+kFZDje/f4zXScViNnbcPBN9CrvyTk7sVLmRF/NdJFAMOUjqcxp9IdLKpsOd0sLbgLdBBmkTfBD1zwdwnOi1uA==" />
+<meta name="csrf-token" content="e5JRVoLrbDAeTHApg/iRc79EJQtRukEhzh3cj5i+YoeN6kCyxk5unRvPE4goXI+ULI5utsrnc91va0ro9wvzbw==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-grey-blue"">
@@ -118,7 +118,7 @@
 <div class="sl-block" data-block-type="text" style="height: auto; width: 807.694px; left: 72.306px; top: 70px;" data-name="text-08674a" data-block-id="487a13d98ad878890558c647e39112bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
 <h2>Change Data Capture Architecture</h2>
 </div></div>
-<div class="sl-block" data-block-type="image" style="width: 806.4px; height: 333.125px; left: 76.8px; top: 290.285px;" data-name="image-d6eab5" data-block-id="14be761bc98c43c14c473574b6cc1db2"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1496" data-natural-height="618" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/721468/images/8655485/pasted-from-clipboard.png"></div></div></section></section><section class="stack" data-id="25b189d55d45c84b6bd7ee5fa55919c6"><section data-id="6b839be3be7d94243ad54e523fd9915a"><div class="sl-block" data-block-type="text" style="height: auto; width: 757.597px; left: 101.202px; top: 206px;" data-name="text-08674a" data-block-id="9f51734439b7e5bdf3c7cbd05756e098"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="image" style="width: 806.4px; height: 333.125px; left: 76.8px; top: 290.285px;" data-name="image-d6eab5" data-block-id="14be761bc98c43c14c473574b6cc1db2"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1496" data-natural-height="618" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/721468/images/8655485/pasted-from-clipboard.png"></div></div></section></section><section class="stack" data-id="25b189d55d45c84b6bd7ee5fa55919c6"><section data-id="6b839be3be7d94243ad54e523fd9915a"><div class="sl-block" data-block-type="text" style="height: auto; width: 757.597px; left: 101.202px; top: 206px;" data-name="text-08674a" data-block-id="9f51734439b7e5bdf3c7cbd05756e098"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h2>
 <strong>Debezium</strong> CDC Platform</h2>
 </div></div></section><section data-id="eabc5b8a75c75e9e69bb5e7a3b10f7dd"><div class="sl-block" data-block-type="text" style="height: auto; width: 655.315px; left: 152.342px; top: 210px;" data-name="text-888455" data-block-id="d516163f84a7fa2634fa83943d402064"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
@@ -312,33 +312,52 @@
 <p style="text-align:left"><span>Setting Up DB2 - Docker</span></p>
 </div></div>
 
-<div class="sl-block" data-block-type="text" style="height: auto; width: 680px; left: 52.2106px; top: 280px;" data-name="text-b8f85d" data-block-id="863752de25ea059153332056ed52ea45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
-<ul><li style="text-align:left">
-<span>Put tables into capture mode</span><ul>
-<li style="text-align:left"><span style="font-size:0.7em">​create a table​<span style="font-size:0.7em"></span></span></li>
-<li style="text-align:left"><span style="font-size:0.7em"><span style="color: white; --darkreader-inline-color:#fffede;" data-darkreader-inline-color="">Invoke the </span><strong>ADDTABLE</strong><span style="color: white; --darkreader-inline-color:#fffede;" data-darkreader-inline-color=""> statement for each table that you want to put into capture</span></span></li>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 491px; left: 39.2106px; top: 280px;" data-name="text-b8f85d" data-block-id="863752de25ea059153332056ed52ea45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li style="text-align:left">
+<span>Put tables into capture mode</span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.7em">​create a schema: <strong>TEST</strong> &amp; table​: <strong>TXLOG</strong></span></li>
+	</ul>
+	</li>
 </ul>
-</li></ul>
-<p style="text-align:left"><br></p>
-<p style="text-align:left"><br></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 674px; height: 149.5px; left: 103.896px; top: 453px;" data-name="code-f04597" data-block-id="50cb32c7ebed24dc57c49725b701683e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>CREATE TABLE TEST.TXLOG(
-  tx_id INT GENERATED BY DEFAULT AS IDENTITY NOT NULL,
-  content VARCHAR(150) NOT NULL,
-  status INT NOT NULL,
-  PRIMARY KEY (tx_id)
-);
-</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="width: 674px; height: 43.5px; left: 103.896px; top: 623px;" data-block-id="bd97f448a9b4ece5dbd75bd29cee9d7b" data-name="code-0b4166"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 14;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>CALL ASNCDC.ADDTABLE('TEST', 'TXLOG'); </code></pre></div></div></section><section data-id="92b0ffe01026966e8424ab78aa380699"><div class="sl-block" data-block-type="text" style="height: auto; width: 655.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="d496727095f5222a68b4e180a90ee927"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="code" style="width: 674px; height: 131px; left: 103.896px; top: 384px;" data-name="code-f04597" data-block-id="50cb32c7ebed24dc57c49725b701683e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code># enter in the db2 container
+docker exec -ti mydb2 bash -c "su - db2inst1"
+
+#connect to db2
+db2 connect to testdb
+db2 create schema TEST authorization db2inst1</code></pre></div></div>
+</section><section data-id="87cdc0540c4263e241acd7e1aff3b475"><div class="sl-block" data-block-type="text" style="height: auto; width: 655.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="332e9f9c62eff327479deda516978bfb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
 <h3>
 <span data-darkreader-inline-color="" style="--darkreader-inline-color:#ffffde; color: rgb(255, 254, 222); text-align: left;">Debezium</span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#ffffde; color: rgb(255, 254, 222); text-align: left;"> DB2 Connector</span>
 </h3>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 809px; left: 56px; top: 210px;" data-name="text-14ed25" data-block-id="1fd462a901ec93cc3adb1d19493bd3f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 809px; left: 56px; top: 210px;" data-name="text-14ed25" data-block-id="6f039eed7de94fd1cae2a71a734ef197"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p style="text-align:left"><span>Setting Up DB2 - Docker</span></p>
 </div></div>
 
-<div class="sl-block" data-block-type="text" style="height: auto; width: 427.789px; left: 52.2106px; top: 280px;" data-name="text-b8f85d" data-block-id="9291c3717ac9a5948fefdaa7e08c237a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 680px; left: 52.2106px; top: 280px;" data-name="text-b8f85d" data-block-id="53e865cb6d09ee591b0042cc46cbdbc0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li style="text-align:left">
+<span>Put tables into capture mode</span><span style="font-size:0.7em">​</span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.7em"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#fffede; color: white;">Invoke the </span><strong>ADDTABLE</strong><span data-darkreader-inline-color="" style="--darkreader-inline-color:#fffede; color: white;"> statement for each table that you want to put into capture</span></span></li>
+	</ul>
+	</li>
+</ul>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 674px; height: 43.5px; left: 103.896px; top: 420px;" data-name="code-0b4166" data-block-id="8c3b1735cc88b88162c8eae057cb0f5e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>CALL ASNCDC.ADDTABLE('TEST', 'TXLOG'); </code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 427.789px; left: 47.8288px; top: 494px;" data-block-id="ec3143c3a3c194c7dab497169adcfe60" data-name="text-4e577b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" dir="ui">
 <ul>
 	<li style="text-align:left">
 <span data-darkreader-inline-color="" style="--darkreader-inline-color:#fffede; color: white;">Reinitialize the ASN service</span><span style="font-size:0.7em">​</span>
@@ -349,7 +368,7 @@
 
 <p style="text-align:left"> </p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 674px; height: 43.5px; left: 82.5531px; top: 346px;" data-name="code-0b4166" data-block-id="df8bb5450dbd8d35ff145e0c5639d9d8"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 14;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>VALUES ASNCDC.ASNCDCSERVICES('reinit','asncdc');</code></pre></div></div></section><section data-id="cf58691fc538bb3d6388815ba782c013"><div class="sl-block" data-block-type="text" style="height: auto; width: 725.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="fe0ba3d1ef07ff7a49d89d632b876dde"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="code" style="width: 674px; height: 43.5px; left: 78.1713px; top: 560px;" data-block-id="7716337f7628258e3e47bb437872dfc0" data-name="code-e317ae"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 15;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>VALUES ASNCDC.ASNCDCSERVICES('reinit','asncdc');</code></pre></div></div></section><section data-id="cf58691fc538bb3d6388815ba782c013"><div class="sl-block" data-block-type="text" style="height: auto; width: 725.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="fe0ba3d1ef07ff7a49d89d632b876dde"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
 <h3>
 <span>Installing </span><span>Debezium</span><span> DB2 Connector</span>
 </h3>
@@ -489,7 +508,19 @@ localhost:8083/connectors/ -d '
     "transforms.route.regex": "testdb.TEST.(.*)",
     "transforms.route.replacement": "$1"
   }
-}'</code></pre></div></div></section></section><section class="stack" data-id="7592c751a1efb2e957397f6b491c5232"><section data-id="5015e82a963dfe8bf67229bee02ad7dc"><div class="sl-block" data-block-type="text" style="height: auto; width: 757.597px; left: 101.202px; top: 206px;" data-name="text-08674a" data-block-id="4004aa9bde89dc65548fab818a96690c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+}'</code></pre></div></div></section><section data-id="a16df4abaaeb5659d7e5a4c53cbf93dd"><div class="sl-block" data-block-type="text" style="height: auto; width: 725.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="7ec9f0043c5112fc489c33ae0cbfbfe9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><h3>
+<span>Installing </span><span>Debezium</span><span> DB2 Connector</span>
+</h3></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 317px; left: 50px; top: 178px;" data-name="text-14ed25" data-block-id="1984d27cfaeaac6d5e12452facf3e9e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="text-align:left">Inserting test data</li>
+</ul>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 683px; height: 79px; left: 91.8956px; top: 242px;" data-name="code-0b4166" data-block-id="45ee53febe4d513f84930e79a871eaf4"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="sql" style="font-size: 16px; line-height: 19px;"><code>INSERT INTO TEST.TXLOG (CONTENT, STATUS) VALUES('info log', 200);
+INSERT INTO TEST.TXLOG (CONTENT, STATUS) VALUES('error log', 500);
+INSERT INTO TEST.TXLOG (CONTENT, STATUS) VALUES('debug log', 404);</code></pre></div></div></section></section><section class="stack" data-id="7592c751a1efb2e957397f6b491c5232"><section data-id="5015e82a963dfe8bf67229bee02ad7dc"><div class="sl-block" data-block-type="text" style="height: auto; width: 757.597px; left: 101.202px; top: 206px;" data-name="text-08674a" data-block-id="4004aa9bde89dc65548fab818a96690c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
 <h2><strong>Kafka Connect JDBC Connector</strong></h2>
 </div></div></section><section data-id="4d98725a2a45cb875ee2b1b850ae75bd"><div class="sl-block" data-block-type="image" style="width: 806.4px; height: 333.125px; left: 76.8px; top: 296.875px; min-width: 1px; min-height: 1px;" data-name="image-dceead" data-block-id="0c73e011d166e990379cf7485bdf81ed"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1496" data-natural-height="618" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/721468/images/8655458/pasted-from-clipboard.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 809px; left: 56px; top: 210px;" data-name="text-14ed25" data-block-id="ac18bfdeb16f35acf8022f01e8791f21"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
@@ -511,8 +542,11 @@ localhost:8083/connectors/ -d '
 <div class="sl-block" data-block-type="text" style="height: auto; width: 655.315px; left: 91.8956px; top: 82.563px;" data-name="text-888455" data-block-id="7906e62551b6c47a6b184cd13e7e84c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h3><span style="color: rgb(255, 254, 222); text-align: left; --darkreader-inline-color:#ffffde;" data-darkreader-inline-color="">Kafka Connect JDBC Connector</span></h3>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 668px; height: 39.5px; left: 72.2106px; top: 643.5px;" data-name="code-1f4130" data-block-id="b4279e59c8b6524c67771c9d32ae88e7"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="sql" style="font-size: 14px; line-height: 17px;"><code>docker-compose up -d</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="width: 668px; height: 401.5px; left: 72.2106px; top: 219.25px;" data-block-id="dd046f484052d075c4feabb85936d35e" data-name="code-f77e8a"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="dockerfile" style="font-size: 14px; line-height: 17px;"><code>version: '3.1'
+<div class="sl-block" data-block-type="code" style="width: 668px; height: 39.5px; left: 72.2106px; top: 645.5px;" data-name="code-1f4130" data-block-id="b4279e59c8b6524c67771c9d32ae88e7"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="sql" style="font-size: 14px; line-height: 17px;"><code>#start PostgreSQL
+docker-compose up -d</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 668px; height: 401.5px; left: 72.2106px; top: 219.25px;" data-block-id="dd046f484052d075c4feabb85936d35e" data-name="code-f77e8a"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="dockerfile" style="font-size: 14px; line-height: 17px;"><code># docker-compose.yaml
+
+version: '3.1'
 
 services:
   db:
@@ -565,7 +599,7 @@ volumes:
 	<li style="text-align:left">Deploy JDBC sink connector for PostgreSQL</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 879px; height: 418px; left: 58.8956px; top: 242px;" data-name="code-0b4166" data-block-id="277c1f1173182d8279c65ca382d2c868"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="json" style="font-size: 16px; line-height: 19px;"><code>curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" \
+<div class="sl-block" data-block-type="code" style="width: 879px; height: 399px; left: 58.8956px; top: 242px;" data-name="code-0b4166" data-block-id="277c1f1173182d8279c65ca382d2c868"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="json" style="font-size: 16px; line-height: 19px;"><code>curl -i -X POST -H "Accept:application/json" -H "Content-Type:application/json" \
 localhost:8083/connectors/ -d '
 {
   "name": "postgre-jdbc-sink",  
@@ -601,7 +635,7 @@ localhost:8083/connectors/ -d '
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":null,"profile_layout":null},"email":"rich04230@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":2609801,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2144443,"slug":"deck","title":"deck","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2021-06-07T14:36:12.562Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/108a8face43f8b704c934eca9d568e6d/thumb.jpg?1623206537","view_count":3,"user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"grey-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":37,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1623206537180,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"notes":{}},"user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":null,"profile_layout":null},"email":"rich04230@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":2609801,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2144443,"slug":"deck","title":"deck","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2021-06-07T14:36:12.562Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/108a8face43f8b704c934eca9d568e6d/thumb.jpg?1623206537","view_count":3,"user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"grey-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":38,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1623230893365,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null,"notes":{}},"user":{"id":721468,"username":"richlee","name":"rich lee","description":"","thumbnail_url":"https://lh5.googleusercontent.com/-cKRO21KbISA/AAAAAAAAAAI/AAAAAAAAABw/5871mNK9i44/photo.jpg?sz=50","account_type":"default","team_id":null,"settings":{"id":571318,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>
